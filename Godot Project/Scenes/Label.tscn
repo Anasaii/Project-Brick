@@ -1,0 +1,13 @@
+[gd_scene format=2]
+
+[node name="Label" type="Label"]
+margin_left = 492.238
+margin_top = 290.626
+margin_right = 619.238
+margin_bottom = 329.626
+text = "cock"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
