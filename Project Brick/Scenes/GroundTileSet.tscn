@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprites/icon.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 15.7528, 16.1236 )
+
+[node name="GroundTileSet" type="Node"]
+
+[node name="TempTexture" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+vframes = 2
+hframes = 2
+region_rect = Rect2( 0, 0, 32, 32 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="TempTexture"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TempTexture/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="TempTexture2" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+vframes = 2
+hframes = 2
+frame = 1
+region_rect = Rect2( 0, 0, 32, 32 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="TempTexture2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TempTexture2/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="TempTexture3" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+vframes = 2
+hframes = 2
+frame = 2
+region_rect = Rect2( 0, 0, 32, 32 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="TempTexture3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TempTexture3/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="TempTexture4" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+vframes = 2
+hframes = 2
+frame = 3
+region_rect = Rect2( 0, 0, 32, 32 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="TempTexture4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TempTexture4/StaticBody2D"]
+shape = SubResource( 1 )
