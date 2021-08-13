@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+onready var animatedSprite = $AnimatedSprite
 const UP = Vector2(0, -1)
 const GRAVITY = 3000
 const MAXFALLSPEED = 1000
@@ -53,3 +54,14 @@ func _physics_process(delta):
 		motion.x = lerp(motion.x,0,0.2)
 		
 	motion = move_and_slide(motion,UP)
+	
+	var axisX = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
+	
+	if axisX > 0:
+		animatedSprite.animation = "movement"
+		animatedSprite.flip_h = true
+	elif axisX < 0:
+		animatedSprite.animation = "movement"
+		animatedSprite.flip_h = false
+	else:
+		animatedSprite.animation = "idle"
